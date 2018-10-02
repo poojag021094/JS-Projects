@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Typing Text Animation in JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container{
+            position: absolute;
+            width: 400px;
+            height: 200px;
+            background-color: black;
+            color: white;
+            border: 1px solid grey;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="text_container"></div> 
+    <script>
+        var string = "If you're visiting this page, you're likely here because you're searching for a random sentence. Sometimes a random word just isn't enough, and that is where the random sentence generator comes into play. By inputting the desired number, you can make a list of as many random sentences as you want or need. Producing random sentences can be helpful in a number of different ways."
+        var arrString = string.split(""); //splits the string at spaces
 
+        function animation(){
+            if(arrString.length > 0){
+                document.getElementById("text_container").innerHTML += arrString.shift(); 
+                //SHIFT() : basically works likes a pop function but at start of the string
+            }else{
+                return
+            }
+            setTimeout(animation, 50); //calls the function at every 50 millisecond
+        }
+        animation(); //call function
+    </script>   
+</body>
+</html>
