@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Image Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #macScreen{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background-image: url(resources/mac.png);
+            width: 799px;
+            height: 609px;
+        }
+        #image_container{
+            position: absolute;
+            background-color: #ccc;
+            width: 720px;
+            height: 410px;
+            margin: 28px 0px 0px 40px;  
+        }
+    </style>
+</head>
+<body>
+    <div id="macScreen">
+        <div id="image_container"></div>
+    </div>
+    <script>
+        var image_container = document.getElementById("image_container");
+        var images = ['kadapakkam.jpg','Yelagiri.jpg','Yercaud.jpg'];
+        var totalpics = images.length;
+        var currentImage = 0;
 
+        function changeImage(){
+            var imageSource = 'resources/' + images[currentImage];
+            currentImage = (currentImage + 1) == totalpics ? 0 : currentImage + 1;
+            image_container.innerHTML = '<img src="' + imageSource + '"/>';
+            setTimeout(changeImage, 3000);
+        }
+        changeImage();
+    </script>
+</body>
+</html>
