@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gunshot Effect in JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .gun-shot{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img class="gun-shot" id="gunshot" src="gunshot.png" alt="gunshot" style="display:  none;">
+    <script>
+        window.onclick = gunshot;
+        function gunshot(event){
+            //1.clone the image element
+            var el = document.getElementById("gunshot").cloneNode();
+            //2. append it to the HTML body
+            document.body.appendChild(el);
+            //3. Remove the display:none style  
+            el.style.display = '';
+            //4. show image at mouse coordinates
+            el.style.left = event.clientX - (el.offsetWidth / 2)+ 'px';
+            el.style.top = event.clientY -(el.offsetHeight / 2)+ 'px';
+            //5. Add audio of gunshots
+            var gunshotAudio = new Audio();
+            gunshotAudio.src = "gunsound.mp3";
+            gunshotAudio.play();
+        }
+    </script>
+</body>
+</html>
