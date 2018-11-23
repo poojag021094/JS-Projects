@@ -1,5 +1,10 @@
 body{
     box-sizing: border-box;
+    height: 641px;
+    background-image: linear-gradient(to bottom right, red, skyblue);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .container{
     position: absolute;
@@ -8,8 +13,9 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    border: 1px solid black;
+    border: 1px solid transparent;
     border-radius: 20px;
+    background: pink;
 }
  h1{
     background: #1F030C;
@@ -23,31 +29,41 @@ body{
     border-top-right-radius: 20px;\
  }
  .calculator{
-     position: absolute;
-     height: 300px;
-     top: 50px;
-     padding: 10px;
-     font-size: 20px;
-     font-family: sans-serif;
-     line-height: 25px;
+    position: absolute;
+    height: 300px;
+    top: 50px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
+    line-height: 25px;
      /*background: pink;*/
-     left: 35px;
+    left: 35px;
  }
  .totaltip{
-     font-size: 30px;
-     margin-top: 25px;
-     text-align: center;
+    font-size: 30px;
+    margin-top: 25px;
+    text-align: center;
      /*background: red;*/
  }
  .totaltip:before{
-     content: "Tip Amount";
-     font-size: 20px;
-     font-weight: bold;
-     display: block;
-     text-transform: uppercase;
+    content: "Tip Amount";
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
  }
  .totaltip small{
-     font-size: 20px;
-     font-weight: bold;
-     display: block;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+ }
+ #calculate{
+    width: 140px;
+    height: 40px;
+    margin-left: 55px;
+    border-radius: 5px;
+    background: aquamarine;
+    font-size: 17px;
+    font-weight: bold;
+    color: brown;
  }
