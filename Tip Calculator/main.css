@@ -1,0 +1,53 @@
+body{
+    box-sizing: border-box;
+}
+.container{
+    position: absolute;
+    width: 360px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    border-radius: 20px;
+}
+ h1{
+    background: #1F030C;
+    color: white;
+    margin: 0;
+    padding: 10px 100px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: normal;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;\
+ }
+ .calculator{
+     position: absolute;
+     height: 300px;
+     top: 50px;
+     padding: 10px;
+     font-size: 20px;
+     font-family: sans-serif;
+     line-height: 25px;
+     /*background: pink;*/
+     left: 35px;
+ }
+ .totaltip{
+     font-size: 30px;
+     margin-top: 25px;
+     text-align: center;
+     /*background: red;*/
+ }
+ .totaltip:before{
+     content: "Tip Amount";
+     font-size: 20px;
+     font-weight: bold;
+     display: block;
+     text-transform: uppercase;
+ }
+ .totaltip small{
+     font-size: 20px;
+     font-weight: bold;
+     display: block;
+ }
