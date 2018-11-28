@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+     <!-- Custom Style -->
+ 
+     <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
+ 
+     <!-- FontAwesome Icons -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+     <link rel="stylesheet" href="main.css">
+ 
+    <title>To Do List, Plain JS</title>
+</head>
+<body>
+    <div class="container">
+        <header class="heading">
+            <h1>Work to-dos</h1>
+        </header>
+        <section class="info">
+            <p class="one">Enter text into input field to add items to your list.</p>
+            <p class="two">Click the item to mark it as complete. </p>
+            <p class="three">Click the "X" to remove the items from your list.</p>
+        </section>
+        <form>
+            <input type="text" name="items" id="item" class="items" placeholder="New item....">
+            <button id="enter"><i class="fas fa-pencil-alt"></i></button>
+        </form>
+        <div class="empty-list">
+            <ul class="list-items">
+
+            </ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
